@@ -48,7 +48,8 @@ def property_():
 
 @app.route('/properties')
 def properties():
-    return render_template('properties.html', properties = Properties.query.all() )
+    properties = db.session.query(Properties).all()
+    return render_template('properties.html', properties = properties)
 
 
 @app.route('/property/<propertyid>')
