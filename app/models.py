@@ -1,11 +1,6 @@
 from . import db
-
-
 class Properties(db.Model):
-    # You can use this to change the table name. The default convention is to use
-    # the class name. In this case a class name of UserProfile would create a
-    # user_profile (singular) table, but if we specify __tablename__ we can change it
-    # to `user_profiles` (plural) or some other name.
+
     __tablename__ = 'properties'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     title = db.Column(db.String(150))
@@ -16,6 +11,8 @@ class Properties(db.Model):
     ptype = db.Column(db.String(10))
     location= db.Column(db.String(50))
     photo = db.Column(db.String(250))
+
+    
     def __init__(self, title, description, num_of_bedrooms, num_of_bathrooms,price,ptype,location,photo):
         self.title = title
         self.description = description
