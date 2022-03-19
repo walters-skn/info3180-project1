@@ -3,7 +3,7 @@ from wtforms import StringField,TextAreaField,SelectField,IntegerField, FloatFie
 from wtforms.validators import DataRequired, Length
 from flask_wtf.file import FileField, FileRequired, FileAllowed
 
-class Newproperty(FlaskForm):
+class newproperty(FlaskForm):
     title=StringField('Property Title',validators=[DataRequired(),Length(min=1, max=150)])
     nobed = IntegerField('No.of Rooms', validators=[DataRequired()])
     nobath=IntegerField('No.of Bathrooms',validators=[DataRequired()])
