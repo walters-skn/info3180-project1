@@ -43,7 +43,7 @@ def property_():
             return redirect(url_for('properties'))
         else:
             flash_errors(form)
-    return render_template('newProperty.html',form=form) 
+    return render_template('newproperty.html',form=form) 
 
 
 @app.route('/properties')
